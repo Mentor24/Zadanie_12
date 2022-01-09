@@ -6,6 +6,7 @@ import fbIcon from './images/fbIcon.png'
 import instaIcon from './images/instaIcon.png'
 import Button from '@mui/material/Button'
 import TextField from '@mui/material/TextField'
+import Checkbox from '@mui/material/Checkbox'
 
 const S = {
   View: styled.div`
@@ -66,20 +67,31 @@ const S = {
   flex:1;
   width: 85%;
   margin-top: 4%;
+  border: solid 1px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  `,
+
+  Section3: styled.div`
+  flex:1;
+  width: 85%;
+  margin-top: 4%;
   margin-bottom: 4%;
   border: solid 1px;
   border-radius: 10px;
   `,
 
-  p1: styled.div`
+  s1: styled.div`
   flex:1; 
   height:100%; 
   display: flex; 
   align-items: center; 
-  background-color: green;
+  justify-content:center;
   `,
 
-  p2: styled.div`
+  s2: styled.div`
   flex:1; 
   height:100%; 
   display: flex; 
@@ -87,13 +99,12 @@ const S = {
   justify-content: center;
   `,
 
-  Section2: styled.div`
-  flex:1;
-  width: 85%;
-  margin-top: 4%;
-  margin-bottom: 4%;
-  border: solid 1px;
-  border-radius: 10px;
+  s3: styled.div`
+  height:100%;
+  width:47%; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
   `,
 
   StyledButton: styled(Button)`
@@ -109,6 +120,10 @@ const S = {
   StyledTextField: styled(TextField)`
   width: 100%;
   height:100%;
+  `,
+
+  hr: styled.span`
+  width: 95%;
   `,
 }
 
@@ -133,20 +148,31 @@ function App() {
               <a href='https://www.instagram.com'>Rejestracja przez Facebook</a>
             </S.Section1>
             <S.Section1>
-              <S.p1></S.p1>
-              <S.p2><p> Lub za pomocą maila</p></S.p2>
-              <S.p1></S.p1>
+              <S.s1><S.hr><hr/></S.hr></S.s1>
+              <S.s2><p> Lub za pomocą maila</p></S.s2>
+              <S.s1><S.hr><hr/></S.hr></S.s1>
             </S.Section1>
-            <S.Section1></S.Section1>
-            <S.Section1></S.Section1>
-            <S.Section1></S.Section1>
+            <S.Section2>
+              <S.s3>
+              <S.StyledTextField id="outlined-basic" label="First name..." variant="outlined"/>
+              </S.s3>
+              <S.s3>
+              <S.StyledTextField id="outlined-basic" label="Last name..." variant="outlined"/>
+              </S.s3>
+              </S.Section2>
             <S.Section1>
-              <S.StyledTextField id="outlined-basic" label="Password..." variant="outlined" />
+            <S.StyledTextField id="outlined-basic" label="Email address..." variant="outlined"/>
             </S.Section1>
             <S.Section1>
-              <S.StyledButton variant="contained">Zarejestruj się za darmo</S.StyledButton>
+              <S.StyledTextField id="outlined-basic" label="Password..." variant="outlined"/>
             </S.Section1>
-            <S.Section2></S.Section2>
+            <S.Section1>
+            <Checkbox/>
+            </S.Section1>
+            <S.Section1>
+              <S.StyledButton variant="contained" color="inherit">Zarejestruj się za darmo</S.StyledButton>
+            </S.Section1>
+            <S.Section3></S.Section3>
           </S.Left>
           <S.Right></S.Right>
         </S.Content2>
