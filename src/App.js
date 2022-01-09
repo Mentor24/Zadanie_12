@@ -53,12 +53,22 @@ const S = {
   background-color: grey;
   `,
 
-  Section1: styled.div`
+  Section0: styled.div`
   flex:1;
   width: 85%;
   margin-top: 4%;
   border: solid 1px;
+  border-color: #413fb5;
   border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  `,
+
+  Section1: styled.div`
+  flex:1;
+  width: 85%;
+  margin-top: 4%;
   display: flex;
   align-items: center;
   `,
@@ -67,8 +77,6 @@ const S = {
   flex:1;
   width: 85%;
   margin-top: 4%;
-  border: solid 1px;
-  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -79,8 +87,9 @@ const S = {
   width: 85%;
   margin-top: 4%;
   margin-bottom: 4%;
-  border: solid 1px;
-  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   `,
 
   s1: styled.div`
@@ -101,7 +110,7 @@ const S = {
 
   s3: styled.div`
   height:100%;
-  width:47%; 
+  width:48%; 
   display: flex; 
   align-items: center; 
   justify-content: center;
@@ -125,6 +134,30 @@ const S = {
   hr: styled.span`
   width: 95%;
   `,
+
+  p1: styled.span`
+  font-size: 18px;
+  font-weight: 700;
+  font-family: system-ui;
+  `,
+
+  p2: styled.span`
+  font-size: 14px;
+  font-family: system-ui;
+  `,
+
+  p3: styled.span`
+  font-size: 14px;
+  font-family: system-ui;
+  font-weight: 500;
+  `,
+
+  link: styled.span`
+  border-bottom: solid #413fb5 3px;
+  text-decoration: none; 
+  color: black;
+  `,
+
 }
 
 function App() {
@@ -137,19 +170,19 @@ function App() {
         <S.Content2>
           <S.Left>
             <S.Section1>
-              <p>Zarejestruj się jako trener</p>
+              <S.p1>Zarejestruj się jako trener</S.p1>
             </S.Section1>
-            <S.Section1>
+            <S.Section0>
               <img src={fbIcon} alt='fbIcon'/>
               <a href='https://www.facebook.com'>Rejestracja przez Facebook</a>
-            </S.Section1>
-            <S.Section1>
+            </S.Section0>
+            <S.Section0>
               <img src={instaIcon} alt='instaIcon'/>
               <a href='https://www.instagram.com'>Rejestracja przez Facebook</a>
-            </S.Section1>
+            </S.Section0>
             <S.Section1>
               <S.s1><S.hr><hr/></S.hr></S.s1>
-              <S.s2><p> Lub za pomocą maila</p></S.s2>
+              <S.s2><S.p2> Lub za pomocą maila</S.p2></S.s2>
               <S.s1><S.hr><hr/></S.hr></S.s1>
             </S.Section1>
             <S.Section2>
@@ -167,12 +200,14 @@ function App() {
               <S.StyledTextField id="outlined-basic" label="Password..." variant="outlined"/>
             </S.Section1>
             <S.Section1>
-            <Checkbox/>
+            <Checkbox/> <S.p3>I have read the ? <S.link><a className = "link" href="#">Terms & Conditions</a></S.link></S.p3>
             </S.Section1>
             <S.Section1>
-              <S.StyledButton variant="contained" color="inherit">Zarejestruj się za darmo</S.StyledButton>
+              <S.StyledButton variant="contained">Zarejestruj się za darmo</S.StyledButton>
             </S.Section1>
-            <S.Section3></S.Section3>
+            <S.Section3>
+              <S.p3>Masz już konto ? <S.link><a className = "link" href="#">Zaloguj się</a></S.link></S.p3>
+            </S.Section3>
           </S.Left>
           <S.Right></S.Right>
         </S.Content2>
