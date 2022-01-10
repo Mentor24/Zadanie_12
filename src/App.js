@@ -22,14 +22,13 @@ const S = {
   `,
 
   Content1: styled.div`
-  height: 85vh;
+  height: 70vh;
   display: flex;
   justify-content: center;
   `,
 
   Content2: styled.div`
-  height: 80vh;
-  width: 50%;
+  width: 40%;
   display: flex;
   border: solid 1px;
   border-radius: 10px;
@@ -124,6 +123,7 @@ const S = {
   font-weight: 700;
   font-size: 20px;
   font-family:system-ui; 
+  
   `,
 
   StyledTextField: styled(TextField)`
@@ -152,12 +152,18 @@ const S = {
   font-weight: 500;
   `,
 
-  link: styled.span`
+  link: styled.a`
   border-bottom: solid #413fb5 3px;
   text-decoration: none; 
   color: black;
   `,
 
+  link2: styled.a`
+  text-decoration: none; 
+  color: black;
+  font-weight: 650;
+  font-family: system-ui;
+  `,
 }
 
 function App() {
@@ -174,11 +180,11 @@ function App() {
             </S.Section1>
             <S.Section0>
               <img src={fbIcon} alt='fbIcon'/>
-              <a href='https://www.facebook.com'>Rejestracja przez Facebook</a>
+              <S.link2 href='https://www.facebook.com'>Rejestracja przez Facebook</S.link2>
             </S.Section0>
             <S.Section0>
               <img src={instaIcon} alt='instaIcon'/>
-              <a href='https://www.instagram.com'>Rejestracja przez Facebook</a>
+              <S.link2 href='https://www.instagram.com'>Rejestracja przez Facebook</S.link2>
             </S.Section0>
             <S.Section1>
               <S.s1><S.hr><hr/></S.hr></S.s1>
@@ -200,13 +206,13 @@ function App() {
               <S.StyledTextField id="outlined-basic" label="Password..." variant="outlined"/>
             </S.Section1>
             <S.Section1>
-            <Checkbox/> <S.p3>I have read the ? <S.link><a className = "link" href="#">Terms & Conditions</a></S.link></S.p3>
+            <Checkbox/> <S.p3>I have read the ? <S.link href="#">Terms & Conditions</S.link></S.p3>
             </S.Section1>
             <S.Section1>
               <S.StyledButton variant="contained">Zarejestruj się za darmo</S.StyledButton>
             </S.Section1>
             <S.Section3>
-              <S.p3>Masz już konto ? <S.link><a className = "link" href="#">Zaloguj się</a></S.link></S.p3>
+              <S.p3>Masz już konto ? <S.link href="#">Zaloguj się</S.link></S.p3>
             </S.Section3>
           </S.Left>
           <S.Right></S.Right>
