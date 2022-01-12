@@ -1,30 +1,31 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, {css} from 'styled-components'
 import TOLogo from './images/TOLogo.png'
 import gym from './images/gym.jpg'
 import fbIcon from './images/fbIcon.png'
 import instaIcon from './images/instaIcon.png'
-import Button from '@mui/material/Button'
-import TextField from '@mui/material/TextField'
-import Checkbox from '@mui/material/Checkbox'
+import {TitleBox, LogoBox, HrBox, TextFieldBox, TextFieldBox2, ButtonBox, CheckboxBox, TextBox} from './components';
+
+const common = css`
+  display: flex;
+  justify-content: center;
+  `;
 
 const S = {
   View: styled.div`
-  display: flex;
+  ${common};
   flex-direction: column;
   `,
 
   Header: styled.div`
+  ${common};
   height: 15vh;
-  display: flex;
-  justify-content: center;
   align-items: center;
   `,
 
   Content1: styled.div`
+  ${common};
   height: 70vh;
-  display: flex;
-  justify-content: center;
   `,
 
   Content2: styled.div`
@@ -51,119 +52,6 @@ const S = {
   border-bottom-right-radius: 10px;
   background-color: grey;
   `,
-
-  Section0: styled.div`
-  flex:1;
-  width: 85%;
-  margin-top: 4%;
-  border: solid 1px;
-  border-color: #413fb5;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  `,
-
-  Section1: styled.div`
-  flex:1;
-  width: 85%;
-  margin-top: 4%;
-  display: flex;
-  align-items: center;
-  `,
-
-  Section2: styled.div`
-  flex:1;
-  width: 85%;
-  margin-top: 4%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  `,
-
-  Section3: styled.div`
-  flex:1;
-  width: 85%;
-  margin-top: 4%;
-  margin-bottom: 4%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  `,
-
-  s1: styled.div`
-  flex:1; 
-  height:100%; 
-  display: flex; 
-  align-items: center; 
-  justify-content:center;
-  `,
-
-  s2: styled.div`
-  flex:1; 
-  height:100%; 
-  display: flex; 
-  align-items: center; 
-  justify-content: center;
-  `,
-
-  s3: styled.div`
-  height:100%;
-  width:48%; 
-  display: flex; 
-  align-items: center; 
-  justify-content: center;
-  `,
-
-  StyledButton: styled(Button)`
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-  background-color: #413fb5;
-  font-weight: 700;
-  font-size: 20px;
-  font-family:system-ui; 
-  
-  `,
-
-  StyledTextField: styled(TextField)`
-  width: 100%;
-  height:100%;
-  `,
-
-  hr: styled.span`
-  width: 95%;
-  `,
-
-  p1: styled.span`
-  font-size: 18px;
-  font-weight: 700;
-  font-family: system-ui;
-  `,
-
-  p2: styled.span`
-  font-size: 14px;
-  font-family: system-ui;
-  `,
-
-  p3: styled.span`
-  font-size: 14px;
-  font-family: system-ui;
-  font-weight: 500;
-  `,
-
-  link: styled.a`
-  border-bottom: solid #413fb5 3px;
-  text-decoration: none; 
-  color: black;
-  `,
-
-  link2: styled.a`
-  text-decoration: none; 
-  color: black;
-  font-weight: 650;
-  font-family: system-ui;
-  `,
 }
 
 function App() {
@@ -175,45 +63,16 @@ function App() {
       <S.Content1>
         <S.Content2>
           <S.Left>
-            <S.Section1>
-              <S.p1>Zarejestruj się jako trener</S.p1>
-            </S.Section1>
-            <S.Section0>
-              <img src={fbIcon} alt='fbIcon'/>
-              <S.link2 href='https://www.facebook.com'>Rejestracja przez Facebook</S.link2>
-            </S.Section0>
-            <S.Section0>
-              <img src={instaIcon} alt='instaIcon'/>
-              <S.link2 href='https://www.instagram.com'>Rejestracja przez Facebook</S.link2>
-            </S.Section0>
-            <S.Section1>
-              <S.s1><S.hr><hr/></S.hr></S.s1>
-              <S.s2><S.p2> Lub za pomocą maila</S.p2></S.s2>
-              <S.s1><S.hr><hr/></S.hr></S.s1>
-            </S.Section1>
-            <S.Section2>
-              <S.s3>
-              <S.StyledTextField id="outlined-basic" label="First name..." variant="outlined"/>
-              </S.s3>
-              <S.s3>
-              <S.StyledTextField id="outlined-basic" label="Last name..." variant="outlined"/>
-              </S.s3>
-              </S.Section2>
-            <S.Section1>
-            <S.StyledTextField id="outlined-basic" label="Email address..." variant="outlined"/>
-            </S.Section1>
-            <S.Section1>
-              <S.StyledTextField id="outlined-basic" label="Password..." variant="outlined"/>
-            </S.Section1>
-            <S.Section1>
-            <Checkbox/> <S.p3>I have read the ? <S.link href="#">Terms & Conditions</S.link></S.p3>
-            </S.Section1>
-            <S.Section1>
-              <S.StyledButton variant="contained">Zarejestruj się za darmo</S.StyledButton>
-            </S.Section1>
-            <S.Section3>
-              <S.p3>Masz już konto ? <S.link href="#">Zaloguj się</S.link></S.p3>
-            </S.Section3>
+            <TitleBox TitleBoxText='Zarejestruj się jako trener'></TitleBox>
+            <LogoBox Icon = {fbIcon} alt='fbIcon' link='https://www.facebook.com' LogoBoxText='Rejestracja przez Facebook'></LogoBox>
+            <LogoBox Icon = {instaIcon} alt='instaIcon' link='https://www.instagram.com' LogoBoxText='Rejestracja przez Instagram'></LogoBox>
+            <HrBox HrBoxText = 'Lub za pomocą maila'></HrBox>
+            <TextFieldBox2 label1 = 'First Name...' label2 = 'Last Name...'></TextFieldBox2>
+            <TextFieldBox label = 'Email address...'></TextFieldBox>
+            <TextFieldBox label = 'Password...'></TextFieldBox>
+            <CheckboxBox Text = 'I have read the ' TextLink = 'Terms & Conditions'></CheckboxBox>
+            <ButtonBox ButtonText = 'Zarejestruj się za darmo'></ButtonBox>
+            <TextBox Text = 'Masz już konto ?' TextLink = 'Zaloguj się'></TextBox>
           </S.Left>
           <S.Right></S.Right>
         </S.Content2>
