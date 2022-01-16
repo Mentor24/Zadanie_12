@@ -3,39 +3,32 @@ import styled from 'styled-components'
 const S = {
 
 Section: styled.div`
-  flex:1;
-  width: 85%;
-  margin-top: 4%;
+  flex: 1;
   display: flex;
   align-items: center;
+  justify-content: space-evenly;
+  width: 85%;
+  margin-top: 4%;
   `,
 
-  s: styled.div`
-  flex:1; 
-  height:100%; 
-  display: flex; 
-  align-items: center; 
-  justify-content:center;
+HorizontalRuler: styled.span`
+  width: 30%;
   `,
 
-  hr: styled.span`
-  width: 95%;
-  `,
-
-  p: styled.span`
+Paragraph: styled.span`
   font-size: 11px;
   font-family: system-ui;
+  font-weight: bold;
   `,
-
 }
 
 const HrBox = ({HrBoxText}) => {
     return (
 
     <S.Section>
-        <S.s><S.hr><hr/></S.hr></S.s>
-        <S.s><S.p>{HrBoxText}</S.p></S.s>
-        <S.s><S.hr><hr/></S.hr></S.s>
+      <S.HorizontalRuler><hr/></S.HorizontalRuler>
+      <S.Paragraph>{HrBoxText}</S.Paragraph>
+      <S.HorizontalRuler><hr/></S.HorizontalRuler>
     </S.Section>
     )
     }

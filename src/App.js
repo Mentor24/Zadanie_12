@@ -19,13 +19,12 @@ const S = {
 
   Header: styled.div`
   ${common};
-  height: 15vh;
+  height: 108px;
   align-items: center;
   `,
 
   Content1: styled.div`
   ${common};
-  height: 70vh;
   `,
 
   Content2: styled.div`
@@ -33,6 +32,8 @@ const S = {
   display: flex;
   border: solid 1px;
   border-radius: 10px;
+  height: 756px;
+  width: 768px;
   `,
 
   Left: styled.div`

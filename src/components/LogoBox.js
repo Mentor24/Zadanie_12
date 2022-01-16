@@ -3,7 +3,7 @@ import styled from 'styled-components'
 const S = {
 
 Section: styled.div`
-  flex:1;
+  flex: 1;
   width: 85%;
   margin-top: 4%;
   border: solid 1px;
@@ -14,11 +14,12 @@ Section: styled.div`
   justify-content: space-evenly;
   `,
 
-link: styled.a`
+Link: styled.a`
   text-decoration: none; 
   color: black;
-  font-weight: 650;
+  font-weight: bold;
   font-family: system-ui;
+  font-size: 14px;
   `,
 }
 
@@ -26,8 +27,8 @@ const LogoBox = ({Icon, alt, link, LogoBoxText}) => {
     return (
 
     <S.Section>
-    <img src={Icon} alt={alt}/>
-    <S.link href={link}>{LogoBoxText}</S.link>
+      <img src={Icon} alt={alt}/> 
+      <S.Link href={link}>{LogoBoxText}</S.Link>
     </S.Section>
     )
     }

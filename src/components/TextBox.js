@@ -12,26 +12,25 @@ Section: styled.div`
   justify-content: space-between;
   `,
 
-  link: styled.a`
+Link: styled.a`
   border-bottom: solid #413fb5 3px;
   text-decoration: none; 
   color: black;
   `,
   
-  p: styled.span`
+Paragraph: styled.span`
   font-size: 14px;
   font-family: system-ui;
   font-weight: 500;
   `,
-
 }
 
 const TextBox = ({Text, TextLink}) => {
     return (
 
-        <S.Section>
-        <S.p>{Text} <S.link href="#">{TextLink}</S.link></S.p>
-        </S.Section>
+    <S.Section>
+      <S.Paragraph>{Text} <S.Link href="#">{TextLink}</S.Link></S.Paragraph>
+    </S.Section>
     )
     }
   

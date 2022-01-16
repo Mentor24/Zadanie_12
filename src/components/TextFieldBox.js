@@ -1,28 +1,27 @@
 import styled from 'styled-components'
-import TextField from '@mui/material/TextField'
+import { TextField } from '@mui/material'
 
 const S = {
 
 Section: styled.div`
-  flex:1;
+  flex: 1;
   width: 85%;
   margin-top: 4%;
   display: flex;
   align-items: center;
   `,
 
-  StyledTextField: styled(TextField)`
-  width: 100%;
-  height:100%;
+StyledTextField: styled(TextField)`
+    width: 100%;
+    height: 100%;
   `,
-
 }
 
 const TextFieldBox = ({label}) => {
     return (
 
     <S.Section>
-    <S.StyledTextField id="outlined-basic" label={label} variant="outlined"/>
+      <S.StyledTextField id="outlined-basic" label={label} variant="outlined"/>
     </S.Section>
     )
     }
