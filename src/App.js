@@ -64,18 +64,18 @@ function App() {
       <S.Content1>
         <S.Content2>
           <S.Left>
-            <TitleBox TitleBoxText='Zarejestruj się jako trener'></TitleBox>
-            <LogoBox Icon = {fbIcon} alt='fbIcon' link='https://www.facebook.com' LogoBoxText='Rejestracja przez Facebook'></LogoBox>
-            <LogoBox Icon = {instaIcon} alt='instaIcon' link='https://www.instagram.com' LogoBoxText='Rejestracja przez Instagram'></LogoBox>
-            <HrBox HrBoxText = 'Lub za pomocą maila'></HrBox>
-            <TextFieldBox2 label1 = 'First Name...' label2 = 'Last Name...'></TextFieldBox2>
-            <TextFieldBox label = 'Email address...'></TextFieldBox>
-            <TextFieldBox label = 'Password...'></TextFieldBox>
-            <CheckboxBox Text = 'I have read the ' TextLink = 'Terms & Conditions'></CheckboxBox>
-            <ButtonBox ButtonText = 'Zarejestruj się za darmo'></ButtonBox>
-            <TextBox Text = 'Masz już konto ?' TextLink = 'Zaloguj się'></TextBox>
+            <TitleBox TitleBoxText='Zarejestruj się jako trener'/>
+            <LogoBox Icon = {fbIcon} alt='fbIcon' link='https://www.facebook.com' LogoBoxText='Rejestracja przez Facebook'/>
+            <LogoBox Icon = {instaIcon} alt='instaIcon' link='https://www.instagram.com' LogoBoxText='Rejestracja przez Instagram'/>
+            <HrBox HrBoxText = 'Lub za pomocą maila'/>
+            <TextFieldBox2 label1 = 'First Name...' label2 = 'Last Name...'/>
+            <TextFieldBox label = 'Email address...'/>
+            <TextFieldBox label = 'Password...'/>
+            <CheckboxBox Text = 'I have read the ' TextLink = 'Terms & Conditions'/>
+            <ButtonBox ButtonText = 'Zarejestruj się za darmo'/>
+            <TextBox Text = 'Masz już konto ?' TextLink = 'Zaloguj się'/>
           </S.Left>
-          <S.Right></S.Right>
+          <S.Right/>
         </S.Content2>
       </S.Content1>
     </S.View>
