@@ -55,7 +55,7 @@ const S = {
   `,
 }
 
-function App() {
+const App = () => {
   return (
     <S.View>
       <S.Header>
