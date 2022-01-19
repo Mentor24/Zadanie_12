@@ -55,7 +55,7 @@ const S = {
   `,
 }
 
-const App = () => {
+const App = () =>  {
   return (
     <S.View>
       <S.Header>
