@@ -1,4 +1,3 @@
-import React from 'react'
 import styled, {css} from 'styled-components'
 import TOLogo from './images/TOLogo.png'
 import gym from './images/gym.jpg'
